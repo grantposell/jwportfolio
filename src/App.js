@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { Layout, Header, Navigation, Content, Footer } from 'react-mdl';
+import { Link } from 'react-router-dom';
+import NYC from './assets/NYC.jpeg';
+import Main from "./components/main";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div style={{ height: '100vh', position: 'relative' }}>
+        <Layout style={{ background: `url(${NYC})`}}>
+          <Header transparent style={{ color: 'black' }}>
+            <Navigation>
+              <Link style={{color: 'black', fontWeight: 'bold'}}to="/">Home</Link>
+              <Link style={{color: 'black', fontWeight: 'bold'}}to="/portfolio">Portfolio</Link>
+              <Link style={{color: 'black', fontWeight: 'bold'}}to="/contact">Contact</Link>
+            </Navigation>
+          </Header>
+          <Content>
+          <div className="page-content" />
+          <Main></Main>
+          </Content>
+          <Footer>
+            <p style={{ display: 'grid', placeItems: 'center', color: 'white', }}>Joseph Woehling © {(new Date().getFullYear())}</p>
+          </Footer>
+        </Layout>
+      </div >
+    );
+  }
 }
 
 export default App;
