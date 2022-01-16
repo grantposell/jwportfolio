@@ -5,8 +5,10 @@ class Home extends Component {
     render() {
         return (
             <div style={{}}>
-                <h1>Home Page</h1>
-                <p>Welcome to the Home Page</p>
+                <div style={{ margin: '20px', marginTop: '20px' }}>
+                    <h1>Home Page</h1>
+                    <p>Welcome to the Home Page</p>
+                </div>
             </div>
         )
     }

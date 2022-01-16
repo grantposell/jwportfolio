@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import './App.css';
 import { Layout, Header, Navigation, Content, Footer } from 'react-mdl';
 import { Link } from 'react-router-dom';
-import NYC from './assets/NYC.jpeg';
+// import NYC from './assets/NYC.jpeg';
 import Main from "./components/main";
 
 class App extends Component {

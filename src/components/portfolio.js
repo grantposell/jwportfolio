@@ -5,7 +5,9 @@ class Portfolio extends Component {
     render() {
         return (
             <div style={{}}>
-                <h1>Portfolio Page</h1>
+                <div style={{ margin: '20px', marginTop: '20px' }}>
+                    <h1>Portfolio Page</h1>
+                </div>
             </div>
         )
     }
