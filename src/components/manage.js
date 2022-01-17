@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ImageGrid from './imagegrid';
+import Modal from './modal';
 import UploadForm from './uploadform';
 
 
@@ -11,6 +13,8 @@ class Manage extends Component {
                     <h5>Your Photos</h5>
                     <p>The photos will be located here. Working on integrating Google Firebase now.</p>
                     <UploadForm/>
+                    <ImageGrid/>
+                    <Modal/>
                 </div>
                 
             </div>
