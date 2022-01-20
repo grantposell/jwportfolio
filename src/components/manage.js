@@ -13,7 +13,9 @@ const Manage = () => {
                 <div style={{ margin: '20px', marginTop: '20px' }}>
                     <h1>Website Management Console</h1>
                     <h5>Your Photos</h5>
-                    <p>The photos will be located here. Working on integrating Google Firebase now.</p>
+                    <p>The photos will be located here. Working on integrating Google Firebase now.
+                        What is going on here!
+                    </p>
                     <UploadForm/>
                     <ImageGrid setSelectedImg={setSelectedImg} />
                     { selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg}/>}
