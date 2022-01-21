@@ -10,12 +10,12 @@ import 'firebase/firestore';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDWqGwdBEwMsgLXrp3lme326XYEdLKr4ZA",
-  authDomain: "jwoehling-portfolio.firebaseapp.com",
-  projectId: "jwoehling-portfolio",
-  storageBucket: "jwoehling-portfolio.appspot.com",
-  messagingSenderId: "202138164361",
-  appId: "1:202138164361:web:881d624ebdda76f5123a58"
+  apiKey: "AIzaSyCvn9jdS6VGaQ1RdAdWJ3H37p2iCNC8PvI",
+  authDomain: "jwoehling-project-prod.firebaseapp.com",
+  projectId: "jwoehling-project-prod",
+  storageBucket: "jwoehling-project-prod.appspot.com",
+  messagingSenderId: "126468792083",
+  appId: "1:126468792083:web:0a28f137b3315597ad84e6"
 };
 
 // Initialize Firebase
