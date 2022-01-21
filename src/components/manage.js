@@ -18,7 +18,8 @@ const Manage = () => {
                     </p>
                     <UploadForm/>
                     <ImageGrid setSelectedImg={setSelectedImg} />
-                    { selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg}/>}
+                    { selectedImg && 
+                    <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg}/>}
                 </div>
                 
             </div>
