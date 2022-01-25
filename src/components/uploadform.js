@@ -12,7 +12,7 @@ const UploadForm = () => {
 
     const changeHandler = (e) => {
         let selected = e.target.files[0];
-        
+
         if (selected && types.includes(selected.type)) {
             setFile(selected);
             setError('')
@@ -25,7 +25,7 @@ const UploadForm = () => {
     return (
         <form>
             <label>
-                <input type="file" onChange={changeHandler} />
+                <input type="file" multiple="multiple" onChange={changeHandler} />
             </label>
             <div className='output'>
                 {error && <div className="error">{ error }</div>}
