@@ -16,6 +16,7 @@ class App extends Component {
               <Link to="/portfolio">Portfolio</Link>
               <Link to="/contact">Contact</Link>
               <Link to="/manage">Manage</Link>
+              <Link to="/login">Login</Link>
             </Navigation>
           </Header>
           {/* <Header transparent style={{ color: 'black' }}>

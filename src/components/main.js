@@ -4,6 +4,7 @@ import Home from './home';
 import Portfolio from './portfolio';
 import Contact from './contact';
 import Manage from './manage';
+import Login from './login';
 
 
 const Main = () => (
@@ -12,6 +13,7 @@ const Main = () => (
         <Route path="/portfolio" element={<Portfolio/>} />
         <Route path="/contact" element={<Contact/>} />
         <Route path="/manage" element={<Manage/>} />
+        <Route path="/login" element={<Login/>} />
     </Routes>
 
 )
