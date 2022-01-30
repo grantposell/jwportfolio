@@ -5,9 +5,9 @@ import SignUp from './signup';
 class Login extends Component {
     render() {
         return (
-            <div style={{}}>
-                <SignUp/>
-            </div>
+            <>
+                <SignUp />
+            </>
         )
     }
 };

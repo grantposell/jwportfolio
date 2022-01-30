@@ -1,12 +1,19 @@
 import React, { useRef } from "react";
 import { Button, Card, Form } from "react-bootstrap";
+// import { useAuth } from "../contexts/AuthContext";
 
 const SignUp = () => {
     const emailRef = useRef();
     const passwordRef = useRef();
     const passwordConfirmRef = useRef();
+    // const { signup } = useAuth()
+    
+    // function handleSubmit(e) {
+    //     e.preventDefault()
+    //     signup(emailRef.current.value, passwordRef.current.value)
+    // }
     return (
-        <div>
+        <>
             <Card className="w-50 m-auto mt-5" >
                 <Card.Body>
                     <h2 className="text-center mb-4">Sign Up</h2>
@@ -30,7 +37,7 @@ const SignUp = () => {
             <div class="w-100 text-center mt-2">
                 Already have an account? Log in
             </div>
-        </div>
+        </>
     )
 };
 export default SignUp;
