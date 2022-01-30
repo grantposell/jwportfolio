@@ -6,8 +6,8 @@ const SignUp = () => {
     const passwordRef = useRef();
     const passwordConfirmRef = useRef();
     return (
-        <>
-            <Card>
+        <div>
+            <Card className="w-50 m-auto mt-5" >
                 <Card.Body>
                     <h2 className="text-center mb-4">Sign Up</h2>
                     <Form>
@@ -23,14 +23,14 @@ const SignUp = () => {
                             <Form.Label>Password Confirmation</Form.Label>
                             <Form.Control type="password" ref={passwordConfirmRef} required />
                         </Form.Group>
-                        <Button className="w-100" type="submit">Sign Up</Button>
+                        <Button className="w-100 mt-5" type="submit">Sign Up</Button>
                     </Form>
                 </Card.Body>
             </Card>
             <div class="w-100 text-center mt-2">
                 Already have an account? Log in
             </div>
-        </>
+        </div>
     )
 };
 export default SignUp;
