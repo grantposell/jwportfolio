@@ -5,7 +5,7 @@ import Portfolio from './portfolio';
 import Contact from './contact';
 import Manage from './manage';
 import Login from './login';
-import { AuthProvider } from '../contexts/AuthContext';
+// import { AuthProvider } from '../contexts/AuthContext';
 
 
 

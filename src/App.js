@@ -1,6 +1,6 @@
 import React from "react"
 import { Container, Navbar, Nav } from "react-bootstrap"
-import { AuthProvider } from "./contexts/AuthContext"
+// import { AuthProvider } from "./contexts/AuthContext"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from "./components/home"
 import Login from "./components/login"
@@ -27,7 +27,6 @@ function App() {
       </Navbar>
       <div className="w-100">
         <Router>
-          <AuthProvider>
             <Routes>
               <Route exact path="/" element={<Home />} />
               <Route path="/portfolio" element={<Portfolio />} />
@@ -38,7 +37,6 @@ function App() {
               <Route path="/managed" element={<Manage />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
             </Routes>
-          </AuthProvider>
         </Router>
       </div>
       <footer style={{display: 'flex', position:'fixed', left: '0', right: '0', bottom: '0', height:'50px', width: '100%', backgroundColor: 'black', borderTop: '1px solid white', justifyContent: 'center', alignItems: 'center' }}>
