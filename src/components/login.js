@@ -11,7 +11,7 @@ export default function Login() {
 
     const signIn = () => {
         auth.signInWithEmailAndPassword(email, password).then(res => {
-            history.push('/main');
+            history.push('/manage');
             //do something else with the response
         }).catch(err => {
             //do something with the error
