@@ -10,7 +10,7 @@ import 'firebase/auth';
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-const firebaseConfig = {
+const config = {
   apiKey:'AIzaSyCvn9jdS6VGaQ1RdAdWJ3H37p2iCNC8PvI',
   authDomain: 'jwoehling-project-prod.firebaseapp.com',
   projectId: 'jwoehling-project-prod',
@@ -20,7 +20,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(config);
 
 
 const projectStorage = firebase.storage();

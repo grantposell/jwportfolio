@@ -1,47 +1,60 @@
 import React, { useRef, useState } from "react"
 import { Form, Button, Card, Alert } from "react-bootstrap"
-import { useAuth } from "../contexts/AuthContext"
+// import { useAuth } from "../contexts/AuthContext"
+import { auth } from "firebase";
 import { Link, useNavigate } from "react-router-dom"
 
 export default function Login() {
-  const emailRef = useRef()
-  const passwordRef = useRef()
-  const { login } = useAuth()
-  const [error, setError] = useState("")
-  const [loading, setLoading] = useState(false)
-  const history = useNavigate()
+    const history = useNavigate();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
-  async function handleSubmit(e) {
-    e.preventDefault()
-
-    try {
-      setError("")
-      setLoading(true)
-      await login(emailRef.current.value, passwordRef.current.value)
-      history.push("/")
-    } catch {
-      setError("Failed to log in")
+    const signIn = () => {
+        auth.signInWithEmailAndPassword(email, password).then(res => {
+            history.push('/main');
+            //do something else with the response
+        }).catch(err => {
+            //do something with the error
+        })
     }
+  // const emailRef = useRef()
+  // const passwordRef = useRef()
+  // const { login } = useAuth()
+  // const [error, setError] = useState("")
+  // const [loading, setLoading] = useState(false)
+  // const history = useNavigate()
 
-    setLoading(false)
-  }
+  // async function handleSubmit(e) {
+  //   e.preventDefault()
+
+  //   try {
+  //     setError("")
+  //     setLoading(true)
+  //     await login(emailRef.current.value, passwordRef.current.value)
+  //     history.push("/")
+  //   } catch {
+  //     setError("Failed to log in")
+  //   }
+
+  //   setLoading(false)
+  // }
 
   return (
     <>
       <Card className="w-50 m-auto mt-5">
         <Card.Body>
           <h2 className="text-center mb-4">Log In</h2>
-          {error && <Alert variant="danger">{error}</Alert>}
-          <Form onSubmit={handleSubmit}>
+          {/* {error && <Alert variant="danger">{error}</Alert>} */}
+          <Form>
             <Form.Group id="email">
               <Form.Label>Email</Form.Label>
-              <Form.Control type="email" ref={emailRef} required />
+              <Form.Control type="email" placeholder='Enter your email' value={email} onChange={e => setEmail(e.currentTarget.value)} required />
             </Form.Group>
             <Form.Group id="password">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" ref={passwordRef} required />
+              <Form.Control type="password" placeholder='Enter your password' value={password} onChange={e => setPassword(e.currentTarget.value)} required />
             </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
+            <Button onClick={signIn} className="w-100">
               Log In
             </Button>
           </Form>
